@@ -1,3 +1,8 @@
+<!--
+GitHub Repository Description:
+🚀 AI-Powered Solana NFT Fusion Platform | Buy, Fuse & Mint NFTs with AI | Smart Contract + Image Generation | Solana Blockchain NFT Marketplace
+-->
+
 # Solana NFT Fusion with AI 🚀
 
 Generate unique AI-powered images by fusing attributes from parent Solana NFTs. This project combines the power of blockchain technology with artificial intelligence to create innovative NFT experiences.
@@ -15,7 +20,7 @@ Generate unique AI-powered images by fusing attributes from parent Solana NFTs. 
 - **Wallet Integration**: Seamless connection with Solana wallets
 - **Cross-Collection Compatibility**: Work with any Solana NFT collection
 
-## �� Use Cases
+## 🎯 Use Cases
 
 - **NFT Marketplace**: Purchase and fuse NFTs in a seamless marketplace experience
 - **Collection Evolution**: Buy base NFTs and evolve them through AI fusion
@@ -24,7 +29,7 @@ Generate unique AI-powered images by fusing attributes from parent Solana NFTs. 
 - **Gaming Assets**: Create dynamic NFT assets for blockchain games through fusion
 - **Investment Opportunities**: Buy, fuse, and trade NFTs for potential value appreciation
 
-## ��️ Technology Stack
+## 🧰 Technology Stack
 
 - **Blockchain**: Solana
 - **AI/ML**: Advanced image generation models
