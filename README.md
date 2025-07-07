@@ -29,13 +29,13 @@ Generate unique AI-powered images by fusing attributes from parent Solana NFTs. 
 - **Gaming Assets**: Create dynamic NFT assets for blockchain games through fusion
 - **Investment Opportunities**: Buy, fuse, and trade NFTs for potential value appreciation
 
-## 🧰 Technology Stack
+## 🛠️ Technology Stack
 
-- **Blockchain**: Solana
+- **Blockchain**: Solana (v2.1.4)
+- **Smart Contracts**: Rust (v1.83.0) with Anchor Framework (v0.30.1)
+- **Backend**: NestJS (Node.js framework)
 - **AI/ML**: Advanced image generation models
 - **Frontend**: React/Next.js
-- **Backend**: Node.js/Python
-- **Smart Contracts**: Rust (Solana Programs)
 - **Storage**: IPFS/Arweave
 - **Image Processing**: Computer Vision libraries
 
@@ -44,9 +44,10 @@ Generate unique AI-powered images by fusing attributes from parent Solana NFTs. 
 ### Prerequisites
 
 - Node.js (v16 or higher)
-- Rust and Cargo
-- Solana CLI tools
-- Python 3.8+
+- Rust (v1.83.0) and Cargo
+- Solana CLI tools (v2.1.4)
+- Anchor CLI (v0.30.1)
+- Python 3.8+ (for AI models)
 - Git
 
 ### Installation
@@ -59,14 +60,15 @@ Generate unique AI-powered images by fusing attributes from parent Solana NFTs. 
 
 2. **Install dependencies**
    ```bash
-   # Install Node.js dependencies
+   # Install Node.js dependencies (NestJS)
    npm install
    
-   # Install Python dependencies
+   # Install Python dependencies (for AI models)
    pip install -r requirements.txt
    
-   # Install Rust dependencies
+   # Install Rust dependencies and build Anchor programs
    cargo build
+   anchor build
    ```
 
 3. **Configure environment**
@@ -77,6 +79,10 @@ Generate unique AI-powered images by fusing attributes from parent Solana NFTs. 
 
 4. **Start the development server**
    ```bash
+   # Start NestJS backend
+   npm run start:dev
+   
+   # Start frontend (in separate terminal)
    npm run dev
    ```
 
@@ -134,6 +140,10 @@ Our system utilizes state-of-the-art AI models for image generation:
 SOLANA_RPC_URL=https://api.mainnet-beta.solana.com
 SOLANA_PRIVATE_KEY=your_private_key
 
+# NestJS Backend Configuration
+PORT=3000
+NODE_ENV=development
+
 # AI Model Configuration
 AI_MODEL_PATH=/path/to/models
 GENERATION_QUALITY=high
@@ -152,8 +162,15 @@ STABILITY_API_KEY=your_stability_key
 ```
 solana-nft-fusion-with-ai/
 ├── frontend/                 # React/Next.js frontend
-├── backend/                  # Node.js/Python backend
-├── programs/                 # Solana smart contracts
+├── backend/                  # NestJS backend
+│   ├── src/
+│   │   ├── controllers/     # API controllers
+│   │   ├── services/        # Business logic
+│   │   ├── entities/        # Database models
+│   │   └── modules/         # NestJS modules
+├── programs/                 # Anchor smart contracts
+│   ├── src/                 # Rust program code
+│   └── tests/               # Program tests
 ├── ai-models/               # AI model implementations
 ├── utils/                   # Utility functions
 ├── docs/                    # Documentation
@@ -163,8 +180,8 @@ solana-nft-fusion-with-ai/
 ## 🧪 Testing
 
 ```bash
-# Run all tests
-npm test
+# Run NestJS backend tests
+npm run test
 
 # Run specific test suites
 npm run test:unit
@@ -173,17 +190,27 @@ npm run test:e2e
 
 # Run Solana program tests
 cargo test
+anchor test
 ```
 
 ## 🚀 Deployment
 
 ### Local Development
 ```bash
+# Start NestJS backend
+npm run start:dev
+
+# Start frontend (in separate terminal)
 npm run dev
 ```
 
 ### Production Build
 ```bash
+# Build NestJS backend
+npm run build
+npm run start:prod
+
+# Build frontend
 npm run build
 npm start
 ```
