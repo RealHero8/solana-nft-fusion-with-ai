@@ -1,0 +1,42 @@
+{
+  "name": "solana-nft-fusion-with-ai",
+  "version": "1.0.0",
+  "description": "AI-Powered Solana NFT Fusion Platform - Buy, Fuse & Mint NFTs with AI",
+  "main": "index.js",
+  "scripts": {
+    "dev": "concurrently \"npm run backend:dev\" \"npm run frontend:dev\"",
+    "backend:dev": "cd backend && npm run start:dev",
+    "frontend:dev": "cd frontend && npm run dev",
+    "backend:build": "cd backend && npm run build",
+    "frontend:build": "cd frontend && npm run build",
+    "backend:start": "cd backend && npm run start:prod",
+    "frontend:start": "cd frontend && npm start",
+    "test": "npm run backend:test && npm run frontend:test",
+    "backend:test": "cd backend && npm run test",
+    "frontend:test": "cd frontend && npm run test",
+    "install:all": "npm install && cd backend && npm install && cd ../frontend && npm install",
+    "anchor:build": "cd programs && anchor build",
+    "anchor:deploy": "cd programs && anchor deploy",
+    "anchor:test": "cd programs && anchor test"
+  },
+  "keywords": [
+    "solana",
+    "nft",
+    "ai",
+    "fusion",
+    "blockchain",
+    "smart-contracts",
+    "rust",
+    "nestjs",
+    "react"
+  ],
+  "author": "cashblaze129",
+  "license": "MIT",
+  "devDependencies": {
+    "concurrently": "^8.2.2"
+  },
+  "engines": {
+    "node": ">=16.0.0",
+    "npm": ">=8.0.0"
+  }
+} 
